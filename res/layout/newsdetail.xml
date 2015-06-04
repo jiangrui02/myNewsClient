@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include layout="@layout/title"/>
+<RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:background="@android:color/white">
+<com.sothree.slidinguppanel.SlidingUpPanelLayout
+        android:id="@+id/sliding_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        sothree:umanoPanelHeight="72dp"
+        sothree:umanoShadowHeight="4dp"
+        sothree:umanoParalaxOffset="100dp"
+        sothree:umanoOverlay="true">
+
+    <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+  <ScrollView 
+           android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1">
+    <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+     <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#D3D3D3" >
+     <TextView 
+        android:id="@+id/newsdetailTitle"
+         android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:textSize="30sp"
+    android:textColor="#ffffff"/>
+      <TextView 
+        android:id="@+id/newsdetailTime"
+         android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:gravity="end"
+    />
+</LinearLayout>
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        />
+    <TextView 
+        android:id="@+id/newsdetailtextview"
+         android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:lineSpacingExtra="5dp"
+    android:textSize="15sp"/>
+
+<TextView 
+         android:layout_width="match_parent"
+    android:layout_height="70dp" />
+</LinearLayout>
+</ScrollView>
+</LinearLayout>
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+     android:orientation="vertical">
+  <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+     android:orientation="horizontal">
+    <TextView android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="评论">
+    </TextView>
+    <TextView android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_weight="1">
+    </TextView>
+    <ImageView 
+        android:id="@+id/switchsliding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_action_collapse" />
+    </LinearLayout>
+    <TextView android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#000000"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/commentlistview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+         />
+    <TextView android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+</LinearLayout>
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>
+<LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="#ffffff">
+<RelativeLayout 
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+    <ImageView 
+        android:id="@+id/commentnumImageview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_fa_comments"/>
+       
+    <TextView 
+        android:id="@+id/commentnum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/commentnumImageview"
+        android:text=""
+        android:textColor="#ff0000"
+        />
+    </RelativeLayout>
+    <EditText 
+        android:id="@+id/mycomment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:hint="写评论"
+        android:layout_weight="1"/>
+    <ImageView 
+        android:id="@+id/send_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_action_send_now_dark"/>
+</LinearLayout>
+</RelativeLayout>
+</LinearLayout>
