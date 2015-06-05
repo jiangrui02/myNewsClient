@@ -1,6 +1,5 @@
 package com.jr.utils;
 
-import com.jr.mynewsclient.NewsDetail;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 
@@ -8,7 +7,6 @@ import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
-import android.text.style.SuperscriptSpan;
 
 public class MyApplication extends Application{
 	
@@ -17,7 +15,7 @@ public class MyApplication extends Application{
 	private Editor editor;
 	public ImageLoader imageLoader;
 	public static final String NEWSURL=//"http://192.168.191.1/newsclient/";
-	"http://113.250.152.220/newsclient/";
+	"http://113.251.222.116/newsclient/";
 	public void onCreate() {
 		super.onCreate();
 		context=getApplicationContext();
